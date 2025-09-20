@@ -1,0 +1,323 @@
+# Version: The Final Testament 13.0 - The MEXC Doctrine & Uncompressed Constitution
+# This version updates the Legion's operational doctrine for deployment at the new
+# MEXC forward base. All protocols are realigned for this new, promising battlefield.
+
+# --- Master Operational Control ---
+# [PACT KEPT]
+simulation_mode: paper
+
+# [PACT KEPT]
+initial_capital: 10000.0
+
+# [PROTOCOL UPDATE FOR MEXC]: Symbol format confirmed for USDT-settled perpetual swaps.
+target_symbol: BTC/USDT:USDT
+
+# [PACT KEPT]
+tick_interval_seconds: 0.0
+auto_start: true
+
+# --- The Bridge to Live Battlefields (PROTOCOL UPDATE FOR MEXC) ---
+# This section is now configured for the MEXC forward base.
+live_engine:
+  # The designated exchange is now MEXC.
+  exchange: 'mexc' 
+  
+  # The market type for perpetual futures in ccxt remains 'swap'.
+  market_type: 'swap'
+  
+  # API credentials now map to the new variables in the .env vault for MEXC.
+  api_key_env: 'MEXC_API_KEY'
+  secret_key_env: 'MEXC_SECRET_KEY'
+  # Passphrase is not required for MEXC API, so the line is removed.
+  
+  data_fetch_interval_seconds: 5 
+
+# --- The War Cabinet ---
+# [PACT KEPT]
+execution_engine:
+  leverage: 5
+  alchemist_lasso:
+    flip_size_multiplier: 1.5
+    full_power_flip_threshold: 500.0
+    max_flips_allowed: 1
+
+# --- Data & Simulation Engines ---
+# [PACT KEPT]: The entire doctrine from this point downwards is 100% PRESERVED
+# to maintain consistency with your established and battle-tested strategies.
+data_provider:
+  source: csv
+  campaign_start_date: '2025-06-01'
+  csv_files:
+    - data/BTCUSDT-5m-2025-06-01.csv
+    - data/BTCUSDT-5m-2025-06-02.csv
+    - data/BTCUSDT-5m-2025-06-03.csv
+    - data/BTCUSDT-5m-2025-06-04.csv
+    - data/BTCUSDT-5m-2025-06-05.csv
+    - data/BTCUSDT-5m-2025-06-06.csv
+    - data/BTCUSDT-5m-2025-06-07.csv
+    - data/BTCUSDT-5m-2025-06-08.csv
+    - data/BTCUSDT-5m-2025-06-09.csv
+    - data/BTCUSDT-5m-2025-06-10.csv
+    - data/BTCUSDT-5m-2025-06-11.csv
+    - data/BTCUSDT-5m-2025-06-12.csv
+    - data/BTCUSDT-5m-2025-06-13.csv
+    - data/BTCUSDT-5m-2025-06-14.csv
+    - data/BTCUSDT-5m-2025-06-15.csv
+    - data/BTCUSDT-5m-2025-06-16.csv
+    - data/BTCUSDT-5m-2025-06-17.csv
+    - data/BTCUSDT-5m-2025-06-18.csv
+    - data/BTCUSDT-5m-2025-06-19.csv
+    - data/BTCUSDT-5m-2025-06-20.csv
+    - data/BTCUSDT-5m-2025-06-21.csv
+    - data/BTCUSDT-5m-2025-06-22.csv
+    - data/BTCUSDT-5m-2025-06-23.csv
+    - data/BTCUSDT-5m-2025-06-24.csv
+    - data/BTCUSDT-5m-2025-06-25.csv
+    - data/BTCUSDT-5m-2025-06-26.csv
+    - data/BTCUSDT-5m-2025-06-27.csv
+    - data/BTCUSDT-5m-2025-06-28.csv
+    - data/BTCUSDT-5m-2025-06-29.csv
+    - data/BTCUSDT-5m-2025-06-30.csv
+    - data/BTCUSDT-5m-2025-07-01.csv
+    - data/BTCUSDT-5m-2025-07-02.csv
+    - data/BTCUSDT-5m-2025-07-03.csv
+    - data/BTCUSDT-5m-2025-07-04.csv
+    - data/BTCUSDT-5m-2025-07-05.csv
+    - data/BTCUSDT-5m-2025-07-06.csv
+    - data/BTCUSDT-5m-2025-07-07.csv
+    - data/BTCUSDT-5m-2025-07-08.csv
+    - data/BTCUSDT-5m-2025-07-09.csv
+    - data/BTCUSDT-5m-2025-07-10.csv
+    - data/BTCUSDT-5m-2025-07-11.csv
+    - data/BTCUSDT-5m-2025-07-12.csv
+    - data/BTCUSDT-5m-2025-07-13.csv
+    - data/BTCUSDT-5m-2025-07-14.csv
+    - data/BTCUSDT-5m-2025-07-15.csv
+    - data/BTCUSDT-5m-2025-07-16.csv
+    - data/BTCUSDT-5m-2025-07-17.csv
+    - data/BTCUSDT-5m-2025-07-18.csv
+    - data/BTCUSDT-5m-2025-07-19.csv
+    - data/BTCUSDT-5m-2025-07-20.csv
+    - data/BTCUSDT-5m-2025-07-21.csv
+    - data/BTCUSDT-5m-2025-07-22.csv
+    - data/BTCUSDT-5m-2025-07-23.csv
+    - data/BTCUSDT-5m-2025-07-24.csv
+    - data/BTCUSDT-5m-2025-07-25.csv
+    - data/BTCUSDT-5m-2025-07-26.csv
+    - data/BTCUSDT-5m-2025-07-27.csv
+    - data/BTCUSDT-5m-2025-07-28.csv
+    - data/BTCUSDT-5m-2025-07-29.csv
+  timeframe_minutes: 5
+  strategic_timeframes: ['15m', '1h', '4h']
+  training_days: 45
+  data_window_size: 600
+  random_seed: 42
+
+simulation_engine:
+  # [PACT KEPT]
+  base_bid_strength: [0.1, 2.0]
+  base_ask_strength: [0.1, 2.0]
+  ob_simulation_strength:
+    '4h': [30.0, 60.0]
+    '1h': [15.0, 35.0]
+  fvg_vacuum_factor: 0.1
+
+memory:
+  # [PACT KEPT]
+  strategic_memory_protocol:
+    timeframes: ['1h', '4h']
+  performance_auditor_protocol:
+    memory_size: 5
+    failure_threshold_count: 3
+    cooldown_period_seconds: 7200
+
+capital_allocator:
+  # [PACT KEPT]
+  risk_per_trade_percent: 2.5
+  max_exposure_percent: 95.0
+  reinvestment_aggressiveness: 0.75
+  risk_level_multipliers:
+    FULL: 1.0
+    HALF: 0.5
+    SCOUT: 0.25
+
+risk_manager:
+  # [PACT KEPT]
+  perimeter_architect:
+    atr_period: 14
+    atr_multiplier: 2.0
+    range_atr_multiplier: 4.5
+    catastrophic_atr_extension: 1.0
+    strategic_timeframes: ['4h', '1h']
+    tactical_timeframe: '5m'
+  take_profit_engine:
+    min_rr_target: 1.5
+    exit_strategy:
+      TP1: 0.5
+      TP2: 0.5
+
+analyst_ai:
+  # [PACT KEPT]: This entire chapter is preserved.
+  structure_analyzer:
+    context_awareness:
+      proximity_threshold_percent: 1.2
+
+  multi_timeframe_synthesizer:
+    base_timeframe: '5m'
+    target_timeframes: ['15m', '1h', '4h']
+
+  order_block_analyzer:
+    analysis_timeframes: ['5m', '15m', '1h', '4h']
+    tactical_timeframe: '5m'
+    sensitivity: 0.28
+    mitigation_type: 'Close'
+    signal_memory_lifpan_candles: 500
+
+  fibonacci_helper:
+    analysis_timeframes: ['15m', '1h']
+    tactical_timeframe: '5m'
+    levels: [0.382, 0.5, 0.618, 0.705, 0.786, 0.886]
+    swing_order: 15
+    confluence_tolerance_pct: 0.05
+    confirmation_atr_multiplier: 0.8
+    signal_memory_lifespan_candles: 500
+    golden_pocket_levels: [0.618, 0.705, 0.786]
+    golden_pocket_strength_bonus: 0.2
+    fvg_confluence_strength_bonus: 0.3
+    ob_confluence_strength_bonus: 0.4
+  
+  divergence_detector:
+    analysis_timeframes: ['15m', '1h']
+    tactical_timeframe: '5m'
+    rsi_period: 14
+    swing_order: 10
+    overbought_threshold: 65
+    oversold_threshold: 35
+    signal_memory_lifespan_candles: 500
+    
+  liquidity_analyzer:
+    analysis_timeframes: ['5m', '15m', '1h', '4h']
+    tactical_timeframe: '5m'
+    confirmation_atr_multiplier: 1.0
+    signal_memory_lifespan_candles: 500
+    min_fvg_size_atr_multiplier: 0.3
+    min_volume_multiplier: 1.5
+    volume_ma_period: 20
+
+tactical_controller:
+  # [PACT KEPT]
+  aov_proximity_percent: 1.2
+  strategic_protocol:
+    min_certainty_to_engage: 0.4
+    momentum_rules:
+      risk_multiplier: 1.0
+    reversal_rules:
+      risk_multiplier: 0.5
+
+  unified_entry_protocol:
+    min_true_net_force_for_entry: 15.0
+    veto_entry_on_absorption: true
+  
+  scoring_weights:
+    # [PACT KEPT]
+    hunter_killer_strike_threshold: 2.5
+    bos_bullish: 1.5
+    bos_bearish: 1.5
+    choch_bullish: 2.5
+    choch_bearish: 2.5
+    classic_bullish_confirmed: 2.0
+    classic_bearish_confirmed: 2.0
+    hidden_bullish_confirmed: 2.2
+    hidden_bearish_confirmed: 2.2
+    bullish_fib_confirmation: 2.0
+    bearish_fib_confirmation: 2.0
+    bullish_fvg_confirmation: 1.8
+    bearish_fvg_confirmation: 1.8
+    bullish_ob_interaction: 3.0
+    bearish_ob_interaction: 3.0
+    passive_fib_threat: 0.5
+    passive_ob_threat: 1.0
+    historical_ob_threat_1h: 1.5
+    historical_ob_threat_4h: 2.5
+    scale_in_opp_multiplier: 1.0
+    adverse_power: 1.5
+    htf_obstacle: 1.8
+    emotion_exit: 2.0
+    adverse_power_exit: 1.2
+    range_target_hit: 2.5
+    full_confluence_multiplier: 1.5
+    partial_confluence_multiplier: 1.2
+    timeframe_weights:
+      '4h': 2.0
+      '1h': 1.5
+      '15m': 1.2
+      '5m': 1.0
+    
+  management_rules:
+    # [PACT KEPT]
+    catastrophic_threat_threshold: 4.0
+    proactive_threat_threshold: 2.5
+    proactive_exit_ratio: 0.5
+    dynamic_threat_response:
+      enabled: true
+      threat_exit_score_multiplier: 1.5
+    regime_confirmation_ticks: 3
+    exhaustion_scalp:
+      enabled: true
+      min_pnl_pct: 0.5
+      min_exhaustion_level: 0.7
+      exit_score: 3.0
+    range_profile:
+      allow_scaling: false
+      min_force_for_flip: 1500.0
+      min_pnl_for_exit: 0.2
+      min_flip_confirmation_score: 0.85
+      allow_tactical_flip: true
+    trend_profile:
+      allow_scaling: true
+      min_force_for_flip: 2000.0
+      min_pnl_for_exit: 6.0
+      min_flip_confirmation_score: 0.8
+    default_cooldown: 900
+    min_pnl_for_scaling: 0.5
+    critical_loss_pnl_pct: -8.0
+    obstacle_proximity_atr_multiplier: 2.0
+    flip_confirmation_weights:
+      exhaustion: 0.5
+      exhaustion_threshold: 0.65
+      obstacle: 0.3
+      obstacle_threshold: 0.6
+      pnl: 0.1
+    intelligent_retreat:
+      enabled: true
+      stagnation_exit_seconds: 7200
+      stagnation_profit_threshold: 0.1
+      stagnation_score: 1.0
+      pressure_exit_ticks: 30
+      pressure_score: 1.5
+
+power_scanner:
+  # [PACT KEPT]
+  order_book_depth: 50
+  tactical_timeframe: '5m'
+  book_weight_decay: 0.85
+  absorption_volume_threshold: 10.0
+  tape_confirmation_multiplier: 1.5
+  absorption_veto_strength: 2.0
+
+  # [PACT KEPT]
+  adrenaline_protocol:
+    volume_ma_period: 20
+    atr_period: 14
+    force_multiplier: 100
+
+synthetic_emotion:
+  # [PACT KEPT]
+  tactical_timeframe: '5m'
+  emotion_thresholds:
+    power_strong: 75.0
+    power_weak: -75.0
+    imbalance_high: 0.6
+    imbalance_low: 0.3
+    velocity_hysteria: 0.007
+    velocity_exhaustion: 0.001

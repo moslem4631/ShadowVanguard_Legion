@@ -1,0 +1,33 @@
+# F:\ShadowVanguard_Legion\.gitignore
+# Files and folders for the version control system to ignore.
+
+# Environment files
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.venv/
+env/
+.env
+
+# Configuration files containing secrets
+# ATTENTION: Never commit your actual settings.yaml with API keys.
+# config/settings.yaml
+# config/api_keys.yaml
+
+# Log files
+*.log
+*.log.*
+
+# IDE and OS specific files
+.vscode/
+.idea/
+*.DS_Store
+
+# --- END OF FILE ---
